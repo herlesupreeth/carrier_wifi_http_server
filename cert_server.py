@@ -26,25 +26,6 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-"""
-To generate a certificate use:
-
-$ ipsec pki --gen --type rsa --size 2048 --outform pem > ca-key.pem
-
-$ ipsec pki --self --ca --lifetime 3650 --in ca-key.pem \
-	--type rsa --dn "CN=WLAN_EPDG_CA" --outform pem > ca-cert.pem
-
-Public key 
-
-$ cat ca-cert.pem
-
-Then, construct radius_cert variable using the above output of ca-cert.pem i.e. replace new lines with \r\n
-
-Usage
-
-$ python3 cert_server.py <PORT> <IP_ADRRESS>
-"""
-
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 import ssl
 import argparse
