@@ -100,7 +100,7 @@ radius_cert = "-----BEGIN CERTIFICATE-----\r\nMIIE9zCCA9+gAwIBAgIUWdxGbh1KrRssJA
 #### Step 4: Run the script
 
 ```
-$ python3 cert_server.py <PORT> <IP_ADRRESS>
+$ python3 cert_server.py <HOST_PORT> <IP_ADRRESS>
 ```
 
 where, <IP_ADRRESS>, <HOST_PORT> are IP address and Port configured in Carrier Config Android App at key value "imsi_key_download_url_string"
