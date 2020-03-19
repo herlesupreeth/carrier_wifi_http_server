@@ -106,10 +106,14 @@ $ python3 cert_server.py <PORT> <IP_ADRRESS>
 where, <IP_ADRRESS>, <PORT> are IP address and Port configured in Carrier Config Android App at key value "imsi_key_download_url_string"
 
 
+## Working
+- UE successfully retrieves the certificate from the HTTP server - Verified using Logcat
+
+
 ## Not tested
 - Auto-connecting feature by UE with Carrier WiFi
 
 
-
-
-
+## Not working
+- UE once it retrieves the certificate does not try to retrieve the certificate again - Weird, not sure why
+- UE does not encrypt the IMSI but sends it out in the plan while attaching using EAP-AKA, EAP-AKA-PRIME and EAP-SIM mechanisms
