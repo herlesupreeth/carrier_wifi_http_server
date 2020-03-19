@@ -18,7 +18,7 @@ The python script (cert_server.py) in this repo is a mere tool to distribute pub
 - Carrier Config Android app with following configuration parameters set
 	- "imsi_key_availability_int" set to 3 (assuming we need the key for both WLAN and EPDG)
 	- "carrier_wifi_string_array" set to Base64-encoded Wi-Fi SSID and an EAP type separated by a comma, where the EAP type is an [integer](https://www.iana.org/assignments/eap-numbers/eap-numbers.xhtml)
-	- "imsi_key_download_url_string" set to "http://<IP_ADDRESS>:<PORT>/cert/"
+	- "imsi_key_download_url_string" set to "http://<IP_ADDRESS>:<HOST_PORT>/cert/"
 	- "allow_metered_network_for_cert_download_bool" set to 1
 - Cellular network/non-carrier WiFi network to which phone can connect and download the certificate from the HTTP server. The HTTP server should be reachable from whichever network the phone connects to
 
@@ -103,7 +103,7 @@ radius_cert = "-----BEGIN CERTIFICATE-----\r\nMIIE9zCCA9+gAwIBAgIUWdxGbh1KrRssJA
 $ python3 cert_server.py <PORT> <IP_ADRRESS>
 ```
 
-where, <IP_ADRRESS>, <PORT> are IP address and Port configured in Carrier Config Android App at key value "imsi_key_download_url_string"
+where, <IP_ADRRESS>, <HOST_PORT> are IP address and Port configured in Carrier Config Android App at key value "imsi_key_download_url_string"
 
 
 ## Working
